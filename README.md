@@ -15,10 +15,10 @@ Located in the client folder.
 ## To set up
 Clone repo.
 Using docker / terminal
-run: docker compose build
+run: ```docker compose build```
 which will create the images 
-run: docker compose up
+run: ```docker compose up```
 which will start the containers
 
-localhost:8080
-server is at :3000.
+localhost:8080.
+Server is at :3000.
