@@ -1,0 +1,30 @@
+@use '../../variables.scss' as *;
+
+.client-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  flex-wrap: wrap;
+
+  @media (min-width: $md) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    & > div {
+      width: 50%;
+    }
+  }
+}
+
+.clients-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    width: calc(50% - 1rem);
+  }
+}
