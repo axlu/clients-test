@@ -45,7 +45,7 @@ onMounted(() => {
       </li>
     </ul>
 
-    <div class="pagination mb-2">
+    <div class="mb-2">
       <Button @click="prevPage" type="primary">Previous</Button>
       <span>
         Page {{ page }} of {{ clients ? Math.ceil(clients.total / limit) : 1 }}

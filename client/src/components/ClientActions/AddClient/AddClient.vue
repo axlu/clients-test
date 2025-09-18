@@ -53,7 +53,8 @@ const onClearForm = () => {
 watch(
   newClientValues,
   () => {
-    // Would write more logic to keep "unfixed" errors visible until they are "touched" or fixed
+    // Would write more logic to keep "unfixed" errors visible
+    // until they are "touched" or fixed
     showErrors.value = false;
   },
   { deep: true }
@@ -93,21 +94,13 @@ watch(
     />
 
     <div v-if="showErrors" class="box box--error mb-3">
-      <p v-if="!newClientValues.name" class="error-message">
-        - Name is required.
-      </p>
-      <p v-if="!newClientValues.address" class="error-message">
-        - Address is required.
-      </p>
-      <p v-if="!newClientValues.email" class="error-message">
-        - Email is required.
-      </p>
-      <p v-if="!newClientValues.phonenumber" class="error-message">
-        - Phone Number is required.
-      </p>
+      <p v-if="!newClientValues.name">- Name is required.</p>
+      <p v-if="!newClientValues.address">- Address is required.</p>
+      <p v-if="!newClientValues.email">- Email is required.</p>
+      <p v-if="!newClientValues.phonenumber">- Phone Number is required.</p>
     </div>
 
-    <div class="box box--success mb-3" v-if="showSuccess">
+    <div class="box mb-3" v-if="showSuccess">
       <p class="success-message">Client added successfully!</p>
     </div>
 
